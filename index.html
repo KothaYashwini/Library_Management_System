@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Library Management System</h1>
+        
+        <!-- Add Book Form -->
+        <form action="addBook" method="POST">
+            <h2>Add a Book</h2>
+            <label for="bookId">Book ID:</label>
+            <input type="text" id="bookId" name="bookId" required>
+
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required>
+
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre" name="genre">
+
+            <label for="status">Availability Status:</label>
+            <select id="status" name="status" required>
+                <option value="Available">Available</option>
+                <option value="Checked Out">Checked Out</option>
+            </select>
+
+            <button type="submit">Add Book</button>
+        </form>
+
+        <!-- Search Book Form -->
+        <form action="searchBook" method="GET">
+            <h2>Search Book by ID or Title</h2>
+            <label for="searchInput">Search:</label>
+            <input type="text" id="searchInput" name="searchInput" required>
+
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Update Book Form -->
+        <form action="updateBook" method="POST">
+            <h2>Update Book</h2>
+            <label for="updateId">Book ID:</label>
+            <input type="text" id="updateId" name="updateId" required>
+
+            <label for="newTitle">New Title (Optional):</label>
+            <input type="text" id="newTitle" name="newTitle">
+
+            <label for="newAuthor">New Author (Optional):</label>
+            <input type="text" id="newAuthor" name="newAuthor">
+
+            <label for="newStatus">New Availability Status:</label>
+            <select id="newStatus" name="newStatus">
+                <option value="Available">Available</option>
+                <option value="Checked Out">Checked Out</option>
+            </select>
+
+            <button type="submit">Update Book</button>
+        </form>
+
+        <!-- Delete Book Form -->
+        <form action="deleteBook" method="POST">
+            <h2>Delete a Book</h2>
+            <label for="deleteId">Book ID to Delete:</label>
+            <input type="text" id="deleteId" name="deleteId" required>
+
+            <button type="submit">Delete Book</button>
+        </form>
+
+        <!-- All Books List -->
+        <h2>All Books</h2>
+        <div id="books-list">
+            <!-- Dynamically generated list of books -->
+        </div>
+    </div>
+</body>
+</html>
