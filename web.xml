@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                             http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+    <!-- Servlet configuration for AddBookServlet -->
+    <servlet>
+        <servlet-name>AddBookServlet</servlet-name>
+        <servlet-class>com.ajackus.AddBookServlet</servlet-class> 
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddBookServlet</servlet-name>
+        <url-pattern>/addBook</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet configuration for SearchBookServlet -->
+    <servlet>
+        <servlet-name>SearchBookServlet</servlet-name>
+        <servlet-class>com.ajackus.SearchBookServlet</servlet-class> 
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchBookServlet</servlet-name>
+        <url-pattern>/searchBook</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet configuration for UpdateBookServlet -->
+    <servlet>
+        <servlet-name>UpdateBookServlet</servlet-name>
+        <servlet-class>com.ajackus.UpdateBookServlet</servlet-class> 
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateBookServlet</servlet-name>
+        <url-pattern>/updateBook</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet configuration for DeleteBookServlet -->
+    <servlet>
+        <servlet-name>DeleteBookServlet</servlet-name>
+        <servlet-class>com.ajackus.DeleteBookServlet</servlet-class> 
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteBookServlet</servlet-name>
+        <url-pattern>/deleteBook</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome file configuration -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>  <!-- Default page when the app starts -->
+    </welcome-file-list>
+
+</web-app>
